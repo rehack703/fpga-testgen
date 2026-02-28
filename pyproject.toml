@@ -1,0 +1,28 @@
+[project]
+name = "fpga-testgen"
+version = "0.1.0"
+description = "LLM-based FPGA testbench auto-generation tool"
+requires-python = ">=3.12"
+dependencies = [
+    "click>=8.1",
+    "fastapi>=0.115",
+    "uvicorn>=0.30",
+    "pydantic>=2.0",
+    "pydantic-settings>=2.0",
+    "google-genai>=1.0",
+    "vcdvcd>=2.3",
+    "python-multipart>=0.0.9",
+]
+
+[project.scripts]
+fpga-testgen = "fpga_testgen.cli:cli"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-asyncio>=0.24", "ruff>=0.6"]
+
+[tool.setuptools.packages.find]
+include = ["fpga_testgen*"]
+
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"

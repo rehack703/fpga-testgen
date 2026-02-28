@@ -1,0 +1,3 @@
+VCD info: dumpfile dump.vcd opened for output.
+PASS: 124 tests passed
+/tmp/fpga_testgen_89ax9jri/tb.v:134: $finish called at 1240000 (1ps)
